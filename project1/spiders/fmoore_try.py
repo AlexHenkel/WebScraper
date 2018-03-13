@@ -2,6 +2,8 @@
 import scrapy
 from nltk import PorterStemmer
 
+index = 0
+
 
 class FmooreTrySpider(scrapy.Spider):
     name = 'fmoore-try'
@@ -9,10 +11,15 @@ class FmooreTrySpider(scrapy.Spider):
     start_urls = ['http://lyle.smu.edu/~fmoore']
 
     def parse(self, response):
+        global index
+        index = index + 1
         for text in filter(lambda x: x, map(lambda x: str(
                 x.strip()), response.css('*::text').extract())):
-            page = response.url
+            doc = "Doc{}".format(index)
             for word in text.split():
                 yield {
-                    page: PorterStemmer().stem(word)
+                    'word': PorterStemmer().stem(word),
+                    'doc': doc
                 }
+        for a in response.css('a'):
+            yield response.follow(a, callback=self.parse)
