@@ -1,17 +1,27 @@
 # -*- coding: utf-8 -*-
-from scrapy.spiders import CrawlSpider, Rule
-from scrapy.linkextractors import LinkExtractor
+import scrapy
+from nltk import PorterStemmer
+
+index = 0
 
 
-class FmooreSpider(CrawlSpider):
-    name = 'fmoore'
+class FmooreSpider(scrapy.Spider):
+    name = 'fmoore-try'
     allowed_domains = ['lyle.smu.edu']
-    start_urls = ['http://lyle.smu.edu/~fmoore/']
+    start_urls = ['http://lyle.smu.edu/~fmoore']
 
-    rules = (
-        Rule(LinkExtractor(allow=()),
-             callback="parse_item",
-             follow=True),)
-
-    def parse_item(self, response):
-        print('Processing..' + response.url)
+    def parse(self, response):
+        global index
+        index = index + 1
+        for text in filter(lambda x: x, map(lambda x: str(
+                x.strip()), response.css('*::text').extract())):
+            doc = "Doc{}".format(index)
+            for word in text.split():
+                yield {
+                    'word': PorterStemmer().stem(word),
+                    'doc': doc
+                }
+        for link in response.css('a::attr(href)').extract():
+            print('link: {}'.format(str(link)))
+            yield response.follow(link, callback=self.parse)
+        print('url {}'.format(response.url))
