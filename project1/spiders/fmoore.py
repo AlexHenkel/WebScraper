@@ -5,6 +5,7 @@ from nltk import PorterStemmer
 
 index = 0
 disallowedUrls = []
+disallowedExtensions = ['.pdf', '.xlsx', '.jpg', '.gif']
 
 
 class FmooreSpider(scrapy.Spider):
@@ -30,9 +31,13 @@ class FmooreSpider(scrapy.Spider):
                 disallowedUrls.append(str(route.group(2)))
             return
 
-        # Blacklist disallowedUrls
+        # Blacklist disallowed Urls
         for url in disallowedUrls:
             if url in response.url:
+                return
+        # Blacklist disallowed Extensions
+        for disallowedExt in disallowedExtensions:
+            if response.url.endswith(disallowedExt):
                 return
         index = index + 1
         doc = "Doc{}".format(index)
