@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from nltk import PorterStemmer
 
 
 class FmooreTrySpider(scrapy.Spider):
@@ -13,5 +14,5 @@ class FmooreTrySpider(scrapy.Spider):
             page = response.url
             for word in text.split():
                 yield {
-                    page: word
+                    page: PorterStemmer().stem(word)
                 }
