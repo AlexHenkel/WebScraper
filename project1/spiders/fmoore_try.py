@@ -21,5 +21,7 @@ class FmooreTrySpider(scrapy.Spider):
                     'word': PorterStemmer().stem(word),
                     'doc': doc
                 }
-        for a in response.css('a'):
-            yield response.follow(a, callback=self.parse)
+        for link in response.css('a::attr(href)').extract():
+            print('link: {}'.format(str(link)))
+            yield response.follow(link, callback=self.parse)
+        print('url {}'.format(response.url))

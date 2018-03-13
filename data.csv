@@ -88,6 +88,13 @@ Doc1,be
 Doc1,contact
 Doc1,at
 Doc1,fmoore@smu.edu.
+link: mailto:fmoore@smu.edu
+link: http://lyle.smu.edu
+link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
+link: schedule.htm
+link: CSE5337_syllabus.pdf
+link: CSE7337_syllabus.pdf
+url https://s2.smu.edu/~fmoore/
 Doc2,freeman
 Doc2,moor
 Doc2,-
@@ -193,6 +200,15 @@ Doc2,be
 Doc2,contact
 Doc2,at
 Doc2,fmoore@lyle.smu.edu.
+link: mailto:fmoore@lyle.smu.edu
+link: http://lyle.smu.edu
+link: http://lyle.smu.edu/~fmoore/index-final.htm
+link: schedule.htm
+link: syl_5330.pdf
+link: syl_7330.pdf
+link: timeline.pdf
+link: http://oracle.com.edgesuite.net/timeline/oracle/
+url https://s2.smu.edu/~fmoore/index-fall2017.htm
 Doc3,freeman
 Doc3,moor
 Doc3,-
@@ -286,3 +302,11 @@ Doc3,contact
 Doc3,at
 Doc3,fmoore@lyle.smu.edu
 Doc3,.
+link: SMU-CSE-LOGO.gif
+link: mailto:fmoore@lyle.smu.edu
+link: CSE5337_syllabus.pdf
+link: CSE7337_syllabus.pdf
+link: schedule.htm
+link: https://smu.instructure.com
+link: dontgohere/badfile1.html
+url https://s2.smu.edu/~fmoore/index-final.htm
