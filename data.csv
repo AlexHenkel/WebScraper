@@ -340,6 +340,31 @@ Doc2,6
 Doc2,assign
 Doc2,apr
 Doc2,24
+url @Doc3 https://s2.smu.edu/~fmoore/index-fall2017.htm
+Doc3,freeman
+Doc3,moor
+Doc3,-
+Doc3,smu
+Doc3,fall
+Doc3,2017
+Doc3,fall
+Doc3,2017
+Doc3,freeman
+Doc3,L.
+Doc3,"moore,"
+Doc3,phd
+Doc3,email:
+Doc3,fmoore@lyle.smu.
+Doc3,u
+Doc3,fall
+Doc3,2017
+Doc3,cse
+Doc3,5330/7330
+Doc3,spring
+Doc3,2017
+Doc3,cse
+Doc3,5337
+Doc3,/
 Doc2,apr
 Doc2,26
 Doc2,link
@@ -373,63 +398,8 @@ Doc2,exam
 Doc2,"ii,"
 Doc2,tuesday
 Doc2,may
-Doc2,"15,"
-url @Doc3 https://s2.smu.edu/~fmoore/index-fall2017.htm
-Doc3,freeman
-Doc3,moor
-Doc3,-
-Doc3,smu
-Doc3,fall
-Doc3,2017
-Doc3,fall
-Doc3,2017
-Doc3,freeman
-Doc3,L.
-Doc3,"moore,"
-Doc3,phd
-Doc3,email:
-Doc3,fmoore@lyle.smu.
-Doc3,u
-Doc3,fall
-Doc3,2017
-Doc3,cse
-Doc3,5330/7330
-Doc3,spring
-Doc3,2017
-Doc3,cse
-Doc3,5337
-Doc3,/
 Doc3,7337
 Doc3,keep
-Doc2,2018
-Doc2,per
-Doc2,univers
-Doc2,schedul
-Doc2,exam
-Doc2,II
-link: index.htm
-link: index_duplicate.htm
-link: does_not_exist.htm
-link: misc/count_letters.txt
-link: misc/count_letters_duplicate.txt
-link: misc/IEEE-Spectrum-The-Dark-Dialect-Oct-2017.pdf
-link: misc/algorithm-1-7.pdf
-link: misc/CACM-Internet-Advertising-Oct-2017.pdf
-link: misc/porter_stemmer_example.html
-link: misc/mercator-article.pdf
-link: misc/figure6-12.xlsx
-link: misc/sim-example-2018-02-15.xlsx
-link: misc/levenshtein.html
-link: http://www.gedpage.com/soundex.html
-link: dontgohere/wordlist.txt
-link: misc/permutermindex-example.jpg
-link: misc/bigram-example.jpg
-link: misc/example-2018-02-27.xlsx
-link: misc/useragent.php
-link: misc/exam1.html
-link: http://lyle.smu.edu/~fmoore/this_aint_gonna_work.htm
-link: this_aint_gonna_work.htm
-link: http://www.smu.edu/EnrollmentServices/Registrar/Enrollment/FinalExamSchedule/Spring2018
 Doc3,look
 Doc3,at
 Doc3,the
@@ -462,6 +432,36 @@ Doc3,here
 Doc3,is
 Doc3,an
 Doc3,articl
+Doc2,"15,"
+Doc2,2018
+Doc2,per
+Doc2,univers
+Doc2,schedul
+Doc2,exam
+Doc2,II
+link: index.htm
+link: index_duplicate.htm
+link: does_not_exist.htm
+link: misc/count_letters.txt
+link: misc/count_letters_duplicate.txt
+link: misc/IEEE-Spectrum-The-Dark-Dialect-Oct-2017.pdf
+link: misc/algorithm-1-7.pdf
+link: misc/CACM-Internet-Advertising-Oct-2017.pdf
+link: misc/porter_stemmer_example.html
+link: misc/mercator-article.pdf
+link: misc/figure6-12.xlsx
+link: misc/sim-example-2018-02-15.xlsx
+link: misc/levenshtein.html
+link: http://www.gedpage.com/soundex.html
+link: dontgohere/wordlist.txt
+link: misc/permutermindex-example.jpg
+link: misc/bigram-example.jpg
+link: misc/example-2018-02-27.xlsx
+link: misc/useragent.php
+link: misc/exam1.html
+link: http://lyle.smu.edu/~fmoore/this_aint_gonna_work.htm
+link: this_aint_gonna_work.htm
+link: http://www.smu.edu/EnrollmentServices/Registrar/Enrollment/FinalExamSchedule/Spring2018
 Doc3,highlight
 Doc3,the
 Doc3,histori
@@ -543,6 +543,7 @@ Doc4,locat
 Doc4,request
 Doc4,date
 Doc4,1
+Error on https://s2.smu.edu/~fmoore/this_aint_gonna_work.htm
 Doc4,"henk,"
 Doc4,chri
 Doc4,proctor
@@ -571,16 +572,6 @@ Doc4,"xu,"
 Doc4,qizhi
 Doc4,proctor
 Doc4,7
-Doc4,"zhou,"
-Doc4,He
-Doc4,proctor
-Doc4,8
-Doc4,"zou,"
-Doc4,diyang
-Doc4,inclass
-Doc4,3/8/2018
-Doc4,3:17
-Doc4,pm
 url @Doc5 https://s2.smu.edu/~fmoore/misc/useragent.php
 Doc5,cse
 Doc5,5337/7337
@@ -610,6 +601,16 @@ Doc5,server_protocol:
 Doc5,http/1.1
 Doc5,request_method:
 Doc5,get
+Doc4,"zhou,"
+Doc4,He
+Doc4,proctor
+Doc4,8
+Doc4,"zou,"
+Doc4,diyang
+Doc4,inclass
+Doc4,3/8/2018
+Doc4,3:17
+Doc4,pm
 Doc5,file
 Doc5,last
 Doc5,updated:
@@ -721,6 +722,8 @@ link: http://en.wikipedia.org/wiki/Tf*idf
 link: http://lucene.apache.org/core/
 link: http://search.carrot2.org/stable/search
 link: http://9ol.es/porter_js_demo.html
+Error on https://s2.smu.edu/~fmoore/syl_7330.pdf
+Error on https://s2.smu.edu/~fmoore/syl_5330.pdf
 url @Doc7 https://s2.smu.edu/~fmoore/misc/levenshtein.html
 Doc7,levenshtein
 Doc7,distanc
@@ -747,6 +750,8 @@ Doc7,2:
 Doc7,distanc
 Doc7,=
 url @Doc8 https://www.smu.edu/lyle
+Error on https://s2.smu.edu/~fmoore/misc/count_letters_duplicate.txt
+Error on https://s2.smu.edu/~fmoore/misc/count_letters.txt
 url @Doc9 https://s2.smu.edu/~fmoore/index-final.htm
 Doc9,freeman
 Doc9,moor
@@ -848,7 +853,8 @@ link: CSE7337_syllabus.pdf
 link: schedule.htm
 link: https://smu.instructure.com
 link: dontgohere/badfile1.html
-url @Doc10 https://s2.smu.edu/~fmoore/index_duplicate.htm
+Error on https://s2.smu.edu/~fmoore/does_not_exist.htm
+url @Doc10 https://s2.smu.edu/~fmoore/index.htm
 Doc10 is an exact duplicate from Doc1
 Doc10,freeman
 Doc10,moor
@@ -878,74 +884,7 @@ Doc10,7330
 Doc10,keep
 Doc10,look
 Doc10,at
-Doc10,the
-Doc10,cours
-Doc10,calendar
-Doc10,in
-Doc10,for
-Doc10,the
-Doc10,latest
-Doc10,information.
-Doc10,spring
-Doc10,2018
-Doc10,-
-Doc10,t/th
-Doc10,5:00-6:20
-Doc10,caruth
-Doc10,379
-Doc10,5337
-Doc10,syllabu
-Doc10,7337
-Doc10,syllabu
-Doc10,the
-Doc10,content
-Doc10,of
-Doc10,thi
-Doc10,web
-Doc10,site
-Doc10,are
-Doc10,the
-Doc10,sole
-Doc10,respons
-Doc10,of
-Doc10,dr.
-Doc10,freeman
-Doc10,moor
-Doc10,and
-Doc10,do
-Doc10,not
-Doc10,necessarili
-Doc10,repres
-Doc10,the
-Doc10,opinion
-Doc10,or
-Doc10,polici
-Doc10,of
-Doc10,southern
-Doc10,methodist
-Doc10,university.
-Doc10,the
-Doc10,administr
-Doc10,of
-Doc10,thi
-Doc10,site
-Doc10,is
-Doc10,dr.
-Doc10,freeman
-Doc10,moor
-Doc10,who
-Doc10,may
-Doc10,be
-Doc10,contact
-Doc10,at
-Doc10,fmoore@smu.edu.
-link: mailto:fmoore@smu.edu
-link: http://lyle.smu.edu
-link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
-link: schedule.htm
-link: CSE5337_syllabus.pdf
-link: CSE7337_syllabus.pdf
-url @Doc11 https://s2.smu.edu/~fmoore/index.htm
+url @Doc11 https://s2.smu.edu/~fmoore/index_duplicate.htm
 Doc11 is an exact duplicate from Doc1
 Doc11,freeman
 Doc11,moor
@@ -976,6 +915,35 @@ Doc11,keep
 Doc11,look
 Doc11,at
 Doc11,the
+Doc10,the
+Doc10,cours
+Doc10,calendar
+Doc10,in
+Doc10,for
+Doc10,the
+Doc10,latest
+Doc10,information.
+Doc10,spring
+Doc10,2018
+Doc10,-
+Doc10,t/th
+Doc10,5:00-6:20
+Doc10,caruth
+Doc10,379
+Doc10,5337
+Doc10,syllabu
+Doc10,7337
+Doc10,syllabu
+Doc10,the
+Doc10,content
+Doc10,of
+Doc10,thi
+Doc10,web
+Doc10,site
+Doc10,are
+Doc10,the
+Doc10,sole
+Doc10,respons
 Doc11,cours
 Doc11,calendar
 Doc11,in
@@ -1011,6 +979,40 @@ Doc11,moor
 Doc11,and
 Doc11,do
 Doc11,not
+Doc10,of
+Doc10,dr.
+Doc10,freeman
+Doc10,moor
+Doc10,and
+Doc10,do
+Doc10,not
+Doc10,necessarili
+Doc10,repres
+Doc10,the
+Doc10,opinion
+Doc10,or
+Doc10,polici
+Doc10,of
+Doc10,southern
+Doc10,methodist
+Doc10,university.
+Doc10,the
+Doc10,administr
+Doc10,of
+Doc10,thi
+Doc10,site
+Doc10,is
+Doc10,dr.
+Doc10,freeman
+Doc10,moor
+Doc10,who
+Doc10,may
+Doc10,be
+Doc10,contact
+Doc10,at
+Doc10,fmoore@smu.edu.
+link: mailto:fmoore@smu.edu
+link: http://lyle.smu.edu
 Doc11,necessarili
 Doc11,repres
 Doc11,the
@@ -1038,6 +1040,10 @@ Doc11,at
 Doc11,fmoore@smu.edu.
 link: mailto:fmoore@smu.edu
 link: http://lyle.smu.edu
+link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
+link: schedule.htm
+link: CSE5337_syllabus.pdf
+link: CSE7337_syllabus.pdf
 link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
 link: schedule.htm
 link: CSE5337_syllabus.pdf

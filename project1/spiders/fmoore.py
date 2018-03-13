@@ -2,6 +2,7 @@
 import scrapy
 import re
 import hashlib
+from scrapy.spidermiddlewares.httperror import HttpError
 from nltk import PorterStemmer
 
 index = 0
@@ -15,9 +16,11 @@ class FmooreSpider(scrapy.Spider):
     allowed_domains = ['lyle.smu.edu', 's2.smu.edu']
     start_urls = [
         'http://lyle.smu.edu/~fmoore/robots.txt', 'http://lyle.smu.edu/~fmoore/']
-    custom_settings = {
-        'DUPEFILTER_DEBUG': True
-    }
+
+    def err_callbck(self, failure):
+        if failure.check(HttpError):
+            response = failure.value.response
+            print('Error on {}'.format(response.url))
 
     def parse(self, response):
         global index
@@ -66,4 +69,4 @@ class FmooreSpider(scrapy.Spider):
         # Get all urls, print them and visit them
         for link in response.css('a::attr(href)').extract():
             print('link: {}'.format(str(link)))
-            yield response.follow(link, callback=self.parse)
+            yield response.follow(link, callback=self.parse, errback=self.err_callbck)
