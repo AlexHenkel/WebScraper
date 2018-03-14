@@ -1,25 +1,37 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import re
-from scrapy.spidermiddlewares.httperror import HttpError
 
 disallowedUrls = []
 disallowedExtensions = ['.pdf', '.xlsx', '.jpg', '.gif']
+allowed_domains = ['lyle.smu.edu', 's2.smu.edu']
 
 
-class FmooreBrokenSpider(scrapy.Spider):
-    name = 'fmoore-broken'
-    allowed_domains = ['lyle.smu.edu', 's2.smu.edu']
+class FmooreOutlinksSpider(scrapy.Spider):
+    name = 'fmoore-outlinks'
     start_urls = [
         'http://lyle.smu.edu/~fmoore/robots.txt', 'http://lyle.smu.edu/~fmoore/']
 
-    def err_callbck(self, failure):
-        if failure.check(HttpError):
-            response = failure.value.response
-            yield {'broken-link': response.url}
-
     def parse(self, response):
         global disallowedUrls
+
+        # Verify if site is allowed to crawl
+        allowedSite = False
+        if "http" in response.url:
+            for domain in allowed_domains:
+                if domain in response.url:
+                    allowedSite = True
+                    break
+        else:
+            allowedSite = True
+
+        # Filter disallowed domains and yield content
+        if not allowedSite:
+            yield {
+                'outgoing-link': response.url,
+                'title': str(response.css('title::text').extract_first())
+            }
+            return
 
         # Verify if file is robots.txt
         if response.url.endswith("robots.txt"):
@@ -42,4 +54,4 @@ class FmooreBrokenSpider(scrapy.Spider):
 
         # Get all urls, print them and visit them
         for link in response.css('a::attr(href)').extract():
-            yield response.follow(link, callback=self.parse, errback=self.err_callbck)
+            yield response.follow(link, callback=self.parse)
