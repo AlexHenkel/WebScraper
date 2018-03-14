@@ -4,11 +4,13 @@ import re
 import hashlib
 from scrapy.spidermiddlewares.httperror import HttpError
 from nltk import PorterStemmer
+from nltk.corpus import stopwords
 
 index = 0
 disallowedUrls = []
 disallowedExtensions = ['.pdf', '.xlsx', '.jpg', '.gif']
 hashedFiles = []
+stop_words = set(stopwords.words('english'))
 
 
 class FmooreSpider(scrapy.Spider):
@@ -58,9 +60,12 @@ class FmooreSpider(scrapy.Spider):
                 doc, hashedFiles.index(hashKey) + 1))
         hashedFiles.append(hashKey)
 
-        # Filter empty words and start indexing
+        # Filter empty words and stop words. Start indexing
         for text in filter(lambda x: x, urlContent):
             for word in text.split():
+                stemmed = PorterStemmer().stem(word)
+                if stemmed in stop_words:
+                    continue
                 yield {
                     'word': PorterStemmer().stem(word),
                     'doc': doc
