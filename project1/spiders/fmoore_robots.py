@@ -18,4 +18,3 @@ class FmooreRobotsSpider(scrapy.Spider):
             route = re.match("^([^/.]+)(.*)$", rule)
             disallowedUrls[route.group(2)] = True
         print(disallowedUrls)
-        print(disallowedUrls['/dontgohere/'])
