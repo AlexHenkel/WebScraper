@@ -1,4 +1,3 @@
-url @Doc1 https://s2.smu.edu/~fmoore/
 doc,word
 Doc1,freeman
 Doc1,moor
@@ -28,7 +27,6 @@ Doc1,caruth
 Doc1,syllabu
 Doc1,syllabu
 Doc1,content
-Doc1,thi
 Doc1,web
 Doc1,site
 Doc1,sole
@@ -44,7 +42,6 @@ Doc1,southern
 Doc1,methodist
 Doc1,univers
 Doc1,administr
-Doc1,thi
 Doc1,site
 Doc1,dr
 Doc1,freeman
@@ -52,13 +49,6 @@ Doc1,moor
 Doc1,may
 Doc1,contact
 Doc1,fmoore@smu.edu
-link: mailto:fmoore@smu.edu
-link: http://lyle.smu.edu
-link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
-link: schedule.htm
-link: CSE5337_syllabus.pdf
-link: CSE7337_syllabus.pdf
-url @Doc2 https://s2.smu.edu/~fmoore/schedule.htm
 Doc2,smu
 Doc2,cse
 Doc2,spring
@@ -66,7 +56,6 @@ Doc2,schedul
 Doc2,cse
 Doc2,preliminari
 Doc2,schedul
-Doc2,thi
 Doc2,page
 Doc2,maintain
 Doc2,latest
@@ -231,30 +220,6 @@ Doc2,univers
 Doc2,schedul
 Doc2,exam
 Doc2,ii
-link: index.htm
-link: index_duplicate.htm
-link: does_not_exist.htm
-link: misc/count_letters.txt
-link: misc/count_letters_duplicate.txt
-link: misc/IEEE-Spectrum-The-Dark-Dialect-Oct-2017.pdf
-link: misc/algorithm-1-7.pdf
-link: misc/CACM-Internet-Advertising-Oct-2017.pdf
-link: misc/porter_stemmer_example.html
-link: misc/mercator-article.pdf
-link: misc/figure6-12.xlsx
-link: misc/sim-example-2018-02-15.xlsx
-link: misc/levenshtein.html
-link: http://www.gedpage.com/soundex.html
-link: dontgohere/wordlist.txt
-link: misc/permutermindex-example.jpg
-link: misc/bigram-example.jpg
-link: misc/example-2018-02-27.xlsx
-link: misc/useragent.php
-link: misc/exam1.html
-link: http://lyle.smu.edu/~fmoore/this_aint_gonna_work.htm
-link: this_aint_gonna_work.htm
-link: http://www.smu.edu/EnrollmentServices/Registrar/Enrollment/FinalExamSchedule/Spring2018
-url @Doc3 https://s2.smu.edu/~fmoore/index-fall2017.htm
 Doc3,freeman
 Doc3,moor
 Doc3,smu
@@ -291,7 +256,6 @@ Doc3,highlight
 Doc3,histori
 Doc3,oracl
 Doc3,content
-Doc3,thi
 Doc3,web
 Doc3,site
 Doc3,sole
@@ -307,7 +271,6 @@ Doc3,southern
 Doc3,methodist
 Doc3,univers
 Doc3,administr
-Doc3,thi
 Doc3,site
 Doc3,dr
 Doc3,freeman
@@ -315,16 +278,6 @@ Doc3,moor
 Doc3,may
 Doc3,contact
 Doc3,fmoore@lyle.smu.edu
-link: mailto:fmoore@lyle.smu.edu
-link: http://lyle.smu.edu
-link: http://lyle.smu.edu/~fmoore/index-final.htm
-link: schedule.htm
-link: syl_5330.pdf
-link: syl_7330.pdf
-link: timeline.pdf
-link: http://oracle.com.edgesuite.net/timeline/oracle/
-Error on https://s2.smu.edu/~fmoore/this_aint_gonna_work.htm
-url @Doc4 https://s2.smu.edu/~fmoore/misc/exam1.html
 Doc4,cse
 Doc4,spring
 Doc4,distanc
@@ -346,28 +299,6 @@ Doc4,date
 Doc4,henk
 Doc4,chri
 Doc4,proctor
-url @Doc5 https://s2.smu.edu/~fmoore/misc/useragent.php
-Doc5,cse
-Doc5,user-ag
-Doc5,thi
-Doc5,user-ag
-Doc5,inform
-Doc5,receiv
-Doc5,crawler
-Doc5,defin
-Doc5,uniqu
-Doc5,name
-Doc5,http_accept
-Doc5,"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-Doc5,http_client_ip
-Doc5,server_protocol
-Doc5,http/1.1
-Doc5,request_method
-Doc5,get
-Doc5,file
-Doc5,last
-Doc5,updat
-Doc5,march
 Doc4,henkel
 Doc4,lopez
 Doc4,alejandro
@@ -390,7 +321,26 @@ Doc4,zou
 Doc4,diyang
 Doc4,inclass
 Doc4,pm
-url @Doc6 https://s2.smu.edu/~fmoore/misc/porter_stemmer_example.html
+Doc5,cse
+Doc5,user-ag
+Doc5,user-ag
+Doc5,inform
+Doc5,receiv
+Doc5,crawler
+Doc5,defin
+Doc5,uniqu
+Doc5,name
+Doc5,http_accept
+Doc5,"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+Doc5,http_client_ip
+Doc5,server_protocol
+Doc5,http/1.1
+Doc5,request_method
+Doc5,get
+Doc5,file
+Doc5,last
+Doc5,updat
+Doc5,march
 Doc6,porter
 Doc6,stemmer
 Doc6,onlin
@@ -421,7 +371,6 @@ Doc6,yield
 Doc6,oscar
 Doc6,wild
 Doc6,stem
-Doc6,abov
 Doc6,content
 Doc6,overlay
 Doc6,overlay
@@ -446,7 +395,6 @@ Doc6,frequenc
 Doc6,free
 Doc6,softwar
 Doc6,relat
-Doc6,thi
 Doc6,field
 Doc6,lucen
 Doc6,carrot2
@@ -457,36 +405,57 @@ Doc6,refer
 Doc6,js
 Doc6,implement
 Doc6,http://9ol.es/porter_js_demo.html
-link: http://tartarus.org/~martin/PorterStemmer/
-link: http://en.wikipedia.org/wiki/Document_classification
-link: http://en.wikipedia.org/wiki/Stop_words
-link: http://en.wikipedia.org/wiki/Tf*idf
-link: http://lucene.apache.org/core/
-link: http://search.carrot2.org/stable/search
-link: http://9ol.es/porter_js_demo.html
-Error on https://s2.smu.edu/~fmoore/syl_7330.pdf
-Error on https://s2.smu.edu/~fmoore/syl_5330.pdf
-url @Doc7 https://s2.smu.edu/~fmoore/misc/levenshtein.html
-Doc7,levenshtein
-Doc7,distanc
-Doc7,demo
-Doc7,levenshtein
-Doc7,distanc
-Doc7,calcul
-Doc7,exampl
-Doc7,fast
-Doc7,cat
-Doc7,cat
-Doc7,dog
-Doc7,string
-Doc7,string
-Doc7,distanc
-Error on https://s2.smu.edu/~fmoore/misc/count_letters_duplicate.txt
-Error on https://s2.smu.edu/~fmoore/misc/count_letters.txt
-url @Doc8 https://www.smu.edu/lyle
-Error on https://s2.smu.edu/~fmoore/does_not_exist.htm
-url @Doc9 https://s2.smu.edu/~fmoore/index_duplicate.htm
-Doc9 is an exact duplicate from Doc1
+Doc8,freeman
+Doc8,moor
+Doc8,smu
+Doc8,spring
+Doc8,spring
+Doc8,freeman
+Doc8,l
+Doc8,moor
+Doc8,phd
+Doc8,email
+Doc8,fmoore@lyle.smu.edu
+Doc8,fall
+Doc8,cse
+Doc8,spring
+Doc8,tuesday/thursday
+Doc8,caruth
+Doc8,cse
+Doc8,syllabu
+Doc8,cse
+Doc8,syllabu
+Doc8,keep
+Doc8,look
+Doc8,tent
+Doc8,cours
+Doc8,calendar
+Doc8,cours
+Doc8,inform
+Doc8,canva
+Doc8,content
+Doc8,web
+Doc8,site
+Doc8,sole
+Doc8,respons
+Doc8,dr
+Doc8,freeman
+Doc8,moor
+Doc8,necessarili
+Doc8,repres
+Doc8,opinion
+Doc8,polici
+Doc8,southern
+Doc8,methodist
+Doc8,univers
+Doc8,administr
+Doc8,site
+Doc8,dr
+Doc8,freeman
+Doc8,moor
+Doc8,may
+Doc8,contact
+Doc8,fmoore@lyle.smu.edu
 Doc9,freeman
 Doc9,moor
 Doc9,smu
@@ -515,7 +484,6 @@ Doc9,caruth
 Doc9,syllabu
 Doc9,syllabu
 Doc9,content
-Doc9,thi
 Doc9,web
 Doc9,site
 Doc9,sole
@@ -531,7 +499,6 @@ Doc9,southern
 Doc9,methodist
 Doc9,univers
 Doc9,administr
-Doc9,thi
 Doc9,site
 Doc9,dr
 Doc9,freeman
@@ -539,13 +506,6 @@ Doc9,moor
 Doc9,may
 Doc9,contact
 Doc9,fmoore@smu.edu
-link: mailto:fmoore@smu.edu
-link: http://lyle.smu.edu
-link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
-link: schedule.htm
-link: CSE5337_syllabus.pdf
-link: CSE7337_syllabus.pdf
-url @Doc10 https://s2.smu.edu/~fmoore/index-final.htm
 Doc10,freeman
 Doc10,moor
 Doc10,smu
@@ -556,26 +516,24 @@ Doc10,l
 Doc10,moor
 Doc10,phd
 Doc10,email
-Doc10,fmoore@lyle.smu.edu
+Doc10,fmoore@smu.
+Doc10,u
+Doc10,spring
+Doc10,cse
 Doc10,fall
 Doc10,cse
-Doc10,spring
-Doc10,tuesday/thursday
-Doc10,caruth
-Doc10,cse
-Doc10,syllabu
-Doc10,cse
-Doc10,syllabu
 Doc10,keep
 Doc10,look
-Doc10,tent
 Doc10,cours
 Doc10,calendar
-Doc10,cours
+Doc10,latest
 Doc10,inform
-Doc10,canva
+Doc10,spring
+Doc10,t/th
+Doc10,caruth
+Doc10,syllabu
+Doc10,syllabu
 Doc10,content
-Doc10,thi
 Doc10,web
 Doc10,site
 Doc10,sole
@@ -591,78 +549,24 @@ Doc10,southern
 Doc10,methodist
 Doc10,univers
 Doc10,administr
-Doc10,thi
 Doc10,site
 Doc10,dr
 Doc10,freeman
 Doc10,moor
 Doc10,may
 Doc10,contact
-Doc10,fmoore@lyle.smu.edu
-link: SMU-CSE-LOGO.gif
-link: mailto:fmoore@lyle.smu.edu
-link: CSE5337_syllabus.pdf
-link: CSE7337_syllabus.pdf
-link: schedule.htm
-link: https://smu.instructure.com
-link: dontgohere/badfile1.html
-url @Doc11 https://s2.smu.edu/~fmoore/index.htm
-Doc11 is an exact duplicate from Doc1
-Doc11,freeman
-Doc11,moor
-Doc11,smu
-Doc11,spring
-Doc11,spring
-Doc11,freeman
-Doc11,l
-Doc11,moor
-Doc11,phd
-Doc11,email
-Doc11,fmoore@smu.
-Doc11,u
-Doc11,spring
-Doc11,cse
-Doc11,fall
-Doc11,cse
-Doc11,keep
-Doc11,look
-Doc11,cours
-Doc11,calendar
-Doc11,latest
-Doc11,inform
-Doc11,spring
-Doc11,t/th
-Doc11,caruth
-Doc11,syllabu
-Doc11,syllabu
-Doc11,content
-Doc11,thi
-Doc11,web
-Doc11,site
-Doc11,sole
-Doc11,respons
-Doc11,dr
-Doc11,freeman
-Doc11,moor
-Doc11,necessarili
-Doc11,repres
-Doc11,opinion
-Doc11,polici
-Doc11,southern
-Doc11,methodist
-Doc11,univers
-Doc11,administr
-Doc11,thi
-Doc11,site
-Doc11,dr
-Doc11,freeman
-Doc11,moor
-Doc11,may
-Doc11,contact
-Doc11,fmoore@smu.edu
-link: mailto:fmoore@smu.edu
-link: http://lyle.smu.edu
-link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
-link: schedule.htm
-link: CSE5337_syllabus.pdf
-link: CSE7337_syllabus.pdf
+Doc10,fmoore@smu.edu
+Doc11,levenshtein
+Doc11,distanc
+Doc11,demo
+Doc11,levenshtein
+Doc11,distanc
+Doc11,calcul
+Doc11,exampl
+Doc11,fast
+Doc11,cat
+Doc11,cat
+Doc11,dog
+Doc11,string
+Doc11,string
+Doc11,distanc

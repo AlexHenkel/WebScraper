@@ -75,14 +75,11 @@ class FmooreSpider(scrapy.Spider):
                 if not word:
                     continue
 
-                # Apply Porter Stemmer to word
-                stemmed = PorterStemmer().stem(word)
-
                 # Filter stop words
-                if stemmed in stop_words:
+                if word in stop_words:
                     continue
 
-                # Construct and return item
+                # Apply Porter Stemmer to word and construct and return item
                 yield {
                     'word': PorterStemmer().stem(word),
                     'doc': doc
