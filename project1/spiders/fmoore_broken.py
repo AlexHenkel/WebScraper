@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+import scrapy
+import re
+import hashlib
+import string
+from scrapy.spidermiddlewares.httperror import HttpError
+from nltk import PorterStemmer
+from nltk.corpus import stopwords
+
+disallowedUrls = []
+disallowedExtensions = ['.pdf', '.xlsx', '.jpg', '.gif']
+
+
+class FmooreBrokenSpider(scrapy.Spider):
+    name = 'fmoore-broken'
+    allowed_domains = ['lyle.smu.edu', 's2.smu.edu']
+    start_urls = [
+        'http://lyle.smu.edu/~fmoore/robots.txt', 'http://lyle.smu.edu/~fmoore/']
+
+    def err_callbck(self, failure):
+        if failure.check(HttpError):
+            response = failure.value.response
+            yield {'broken-link': response.url}
+
+    def parse(self, response):
+        global disallowedUrls
+
+        # Verify if file is robots.txt
+        if response.url.endswith("robots.txt"):
+            global disallowedUrls
+            robotsText = response.css('*::text').extract_first()
+            disallowed = re.findall('Disallow: .*', robotsText)
+            for rule in disallowed:
+                route = re.match("^([^/.]+)(.*)$", rule)
+                disallowedUrls.append(str(route.group(2)))
+            return
+
+        # Blacklist disallowed Urls
+        for url in disallowedUrls:
+            if url in response.url:
+                return
+        # Blacklist disallowed Extensions
+        for disallowedExt in disallowedExtensions:
+            if response.url.endswith(disallowedExt):
+                return
+
+        # Get all urls, print them and visit them
+        for link in response.css('a::attr(href)').extract():
+            yield response.follow(link, callback=self.parse, errback=self.err_callbck)
