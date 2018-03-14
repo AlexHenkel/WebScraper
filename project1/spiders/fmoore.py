@@ -64,6 +64,7 @@ class FmooreSpider(scrapy.Spider):
         # Filter empty words and stop words. Start indexing
         for text in filter(lambda x: x, urlContent):
             for word in text.split():
+                word = word.lower()
                 # Filter tokens that don't start with letters
                 if not word or not word[0].isalpha():
                     continue
