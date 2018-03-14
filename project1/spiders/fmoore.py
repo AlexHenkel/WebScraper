@@ -2,6 +2,7 @@
 import scrapy
 import re
 import hashlib
+import string
 from scrapy.spidermiddlewares.httperror import HttpError
 from nltk import PorterStemmer
 from nltk.corpus import stopwords
@@ -63,9 +64,24 @@ class FmooreSpider(scrapy.Spider):
         # Filter empty words and stop words. Start indexing
         for text in filter(lambda x: x, urlContent):
             for word in text.split():
+                # Filter tokens that don't start with letters
+                if not word or not word[0].isalpha():
+                    continue
+
+                # If word ends with sign, remove it
+                while word and word[-1] in string.punctuation:
+                    word = word[:-1]
+                if not word:
+                    continue
+
+                # Apply Porter Stemmer to word
                 stemmed = PorterStemmer().stem(word)
+
+                # Filter stop words
                 if stemmed in stop_words:
                     continue
+
+                # Construct and return item
                 yield {
                     'word': PorterStemmer().stem(word),
                     'doc': doc
