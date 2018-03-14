@@ -6,7 +6,7 @@ Doc1,smu
 Doc1,spring
 Doc1,spring
 Doc1,freeman
-Doc1,L
+Doc1,l
 Doc1,moor
 Doc1,phd
 Doc1,email
@@ -33,7 +33,7 @@ Doc1,web
 Doc1,site
 Doc1,sole
 Doc1,respons
-Doc1,Dr
+Doc1,dr
 Doc1,freeman
 Doc1,moor
 Doc1,necessarili
@@ -46,7 +46,7 @@ Doc1,univers
 Doc1,administr
 Doc1,thi
 Doc1,site
-Doc1,Dr
+Doc1,dr
 Doc1,freeman
 Doc1,moor
 Doc1,may
@@ -81,7 +81,7 @@ Doc2,jan
 Doc2,cours
 Doc2,overview
 Doc2,introduct
-Doc2,IR
+Doc2,ir
 Doc2,hmwk
 Doc2,assign
 Doc2,dark
@@ -154,7 +154,6 @@ Doc2,mar
 Doc2,catch
 Doc2,review
 Doc2,exam
-Doc2,I
 Doc2,hmwk4
 Doc2,assign
 Doc2,distanc
@@ -163,7 +162,6 @@ Doc2,exam1
 Doc2,statu
 Doc2,mar
 Doc2,mar
-Doc2,No
 Doc2,class
 Doc2,spring
 Doc2,break
@@ -218,7 +216,6 @@ Doc2,classif
 Doc2,hmwk
 Doc2,due
 Doc2,may
-Doc2,No
 Doc2,class
 Doc2,read
 Doc2,day
@@ -226,14 +223,14 @@ Doc2,project
 Doc2,due
 Doc2,may
 Doc2,exam
-Doc2,II
+Doc2,ii
 Doc2,tuesday
 Doc2,may
 Doc2,per
 Doc2,univers
 Doc2,schedul
 Doc2,exam
-Doc2,II
+Doc2,ii
 link: index.htm
 link: index_duplicate.htm
 link: does_not_exist.htm
@@ -257,214 +254,67 @@ link: misc/exam1.html
 link: http://lyle.smu.edu/~fmoore/this_aint_gonna_work.htm
 link: this_aint_gonna_work.htm
 link: http://www.smu.edu/EnrollmentServices/Registrar/Enrollment/FinalExamSchedule/Spring2018
-Error on https://s2.smu.edu/~fmoore/this_aint_gonna_work.htm
-url @Doc3 https://s2.smu.edu/~fmoore/misc/exam1.html
+url @Doc3 https://s2.smu.edu/~fmoore/index-fall2017.htm
+Doc3,freeman
+Doc3,moor
+Doc3,smu
+Doc3,fall
+Doc3,fall
+Doc3,freeman
+Doc3,l
+Doc3,moor
+Doc3,phd
+Doc3,email
+Doc3,fmoore@lyle.smu.
+Doc3,u
+Doc3,fall
 Doc3,cse
 Doc3,spring
-Doc3,distanc
-Doc3,student
-Doc3,exam
-Doc3,locat
 Doc3,cse
-Doc3,distanc
-Doc3,student
-Doc3,exam
-Doc3,locat
-Doc3,vs
-Doc3,proctor
-Doc3,number
-Doc3,person
-Doc3,locat
-Doc3,request
-Doc3,date
-Doc3,henk
-Doc3,chri
-Doc3,proctor
-Doc3,henkel
-Doc3,lopez
-Doc3,alejandro
-Doc3,proctor
-Doc3,hua
-Doc3,mengli
-Doc3,proctor
-Doc3,huang
-Doc3,tianqi
-Doc3,inclass
-Doc3,pm
-Doc3,Ma
-Doc3,liang
-Doc3,proctor
-Doc3,Xu
-Doc3,qizhi
-Doc3,proctor
-Doc3,zhou
-Doc3,He
-Doc3,proctor
-Doc3,zou
-Doc3,diyang
-Doc3,inclass
-Doc3,pm
-url @Doc4 https://s2.smu.edu/~fmoore/misc/useragent.php
-Doc4,cse
-Doc4,user-ag
-Doc4,thi
-Doc4,user-ag
-Doc4,inform
-Doc4,receiv
-Doc4,If
-Doc4,crawler
-Doc4,defin
-Doc4,uniqu
-Doc4,name
-Doc4,http_accept
-Doc4,"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-Doc4,http_client_ip
-Doc4,server_protocol
-Doc4,http/1.1
-Doc4,request_method
-Doc4,get
-Doc4,file
-Doc4,last
-Doc4,updat
-Doc4,march
-url @Doc5 https://s2.smu.edu/~fmoore/misc/porter_stemmer_example.html
-Doc5,porter
-Doc5,stemmer
-Doc5,onlin
-Doc5,javascript
-Doc5,porter
-Doc5,stemmer
-Doc5,onlin
-Doc5,find
-Doc5,porter
-Doc5,stem
-Doc5,algorithm
-Doc5,offici
-Doc5,site
-Doc5,exampl
-Doc5,Do
-Doc5,realli
-Doc5,think
-Doc5,weak
-Doc5,yield
-Doc5,temptat
-Doc5,I
-Doc5,tell
-Doc5,terribl
-Doc5,temptat
-Doc5,requir
-Doc5,strength
-Doc5,strength
-Doc5,courag
-Doc5,yield
-Doc5,oscar
-Doc5,wild
-Doc5,stem
-Doc5,abov
-Doc5,content
-Doc5,overlay
-Doc5,overlay
-Doc5,output
-Doc5,goe
-Doc5,stem
-Doc5,stem
-Doc5,output
-Doc5,alon
-Doc5,goe
-Doc5,common
-Doc5,topic
-Doc5,taught
-Doc5,document
-Doc5,classif
-Doc5,includ
-Doc5,stop
-Doc5,word
-Doc5,invers
-Doc5,document
-Doc5,frequenc
-Doc5,free
-Doc5,softwar
-Doc5,relat
-Doc5,thi
-Doc5,field
-Doc5,lucen
-Doc5,carrot2
-Doc5,refer
-Doc5,demo
-Doc5,site
-Doc5,refer
-Doc5,JS
-Doc5,implement
-Doc5,http://9ol.es/porter_js_demo.html
-link: http://tartarus.org/~martin/PorterStemmer/
-link: http://en.wikipedia.org/wiki/Document_classification
-link: http://en.wikipedia.org/wiki/Stop_words
-link: http://en.wikipedia.org/wiki/Tf*idf
-link: http://lucene.apache.org/core/
-link: http://search.carrot2.org/stable/search
-link: http://9ol.es/porter_js_demo.html
-url @Doc6 https://s2.smu.edu/~fmoore/index-fall2017.htm
-Doc6,freeman
-Doc6,moor
-Doc6,smu
-Doc6,fall
-Doc6,fall
-Doc6,freeman
-Doc6,L
-Doc6,moor
-Doc6,phd
-Doc6,email
-Doc6,fmoore@lyle.smu.
-Doc6,u
-Doc6,fall
-Doc6,cse
-Doc6,spring
-Doc6,cse
-Doc6,keep
-Doc6,look
-Doc6,cours
-Doc6,calendar
-Doc6,latest
-Doc6,inform
-Doc6,fall
-Doc6,m/w
-Doc6,caruth
-Doc6,syllabu
-Doc6,syllabu
-Doc6,A
-Doc6,brief
-Doc6,histori
-Doc6,databas
-Doc6,system
-Doc6,articl
-Doc6,highlight
-Doc6,histori
-Doc6,oracl
-Doc6,content
-Doc6,thi
-Doc6,web
-Doc6,site
-Doc6,sole
-Doc6,respons
-Doc6,Dr
-Doc6,freeman
-Doc6,moor
-Doc6,necessarili
-Doc6,repres
-Doc6,opinion
-Doc6,polici
-Doc6,southern
-Doc6,methodist
-Doc6,univers
-Doc6,administr
-Doc6,thi
-Doc6,site
-Doc6,Dr
-Doc6,freeman
-Doc6,moor
-Doc6,may
-Doc6,contact
-Doc6,fmoore@lyle.smu.edu
+Doc3,keep
+Doc3,look
+Doc3,cours
+Doc3,calendar
+Doc3,latest
+Doc3,inform
+Doc3,fall
+Doc3,m/w
+Doc3,caruth
+Doc3,syllabu
+Doc3,syllabu
+Doc3,brief
+Doc3,histori
+Doc3,databas
+Doc3,system
+Doc3,articl
+Doc3,highlight
+Doc3,histori
+Doc3,oracl
+Doc3,content
+Doc3,thi
+Doc3,web
+Doc3,site
+Doc3,sole
+Doc3,respons
+Doc3,dr
+Doc3,freeman
+Doc3,moor
+Doc3,necessarili
+Doc3,repres
+Doc3,opinion
+Doc3,polici
+Doc3,southern
+Doc3,methodist
+Doc3,univers
+Doc3,administr
+Doc3,thi
+Doc3,site
+Doc3,dr
+Doc3,freeman
+Doc3,moor
+Doc3,may
+Doc3,contact
+Doc3,fmoore@lyle.smu.edu
 link: mailto:fmoore@lyle.smu.edu
 link: http://lyle.smu.edu
 link: http://lyle.smu.edu/~fmoore/index-final.htm
@@ -473,7 +323,149 @@ link: syl_5330.pdf
 link: syl_7330.pdf
 link: timeline.pdf
 link: http://oracle.com.edgesuite.net/timeline/oracle/
-Error on https://s2.smu.edu/~fmoore/misc/count_letters_duplicate.txt
+Error on https://s2.smu.edu/~fmoore/this_aint_gonna_work.htm
+url @Doc4 https://s2.smu.edu/~fmoore/misc/exam1.html
+Doc4,cse
+Doc4,spring
+Doc4,distanc
+Doc4,student
+Doc4,exam
+Doc4,locat
+Doc4,cse
+Doc4,distanc
+Doc4,student
+Doc4,exam
+Doc4,locat
+Doc4,vs
+Doc4,proctor
+Doc4,number
+Doc4,person
+Doc4,locat
+Doc4,request
+Doc4,date
+Doc4,henk
+Doc4,chri
+Doc4,proctor
+url @Doc5 https://s2.smu.edu/~fmoore/misc/useragent.php
+Doc5,cse
+Doc5,user-ag
+Doc5,thi
+Doc5,user-ag
+Doc5,inform
+Doc5,receiv
+Doc5,crawler
+Doc5,defin
+Doc5,uniqu
+Doc5,name
+Doc5,http_accept
+Doc5,"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+Doc5,http_client_ip
+Doc5,server_protocol
+Doc5,http/1.1
+Doc5,request_method
+Doc5,get
+Doc5,file
+Doc5,last
+Doc5,updat
+Doc5,march
+Doc4,henkel
+Doc4,lopez
+Doc4,alejandro
+Doc4,proctor
+Doc4,hua
+Doc4,mengli
+Doc4,proctor
+Doc4,huang
+Doc4,tianqi
+Doc4,inclass
+Doc4,pm
+Doc4,liang
+Doc4,proctor
+Doc4,xu
+Doc4,qizhi
+Doc4,proctor
+Doc4,zhou
+Doc4,proctor
+Doc4,zou
+Doc4,diyang
+Doc4,inclass
+Doc4,pm
+url @Doc6 https://s2.smu.edu/~fmoore/misc/porter_stemmer_example.html
+Doc6,porter
+Doc6,stemmer
+Doc6,onlin
+Doc6,javascript
+Doc6,porter
+Doc6,stemmer
+Doc6,onlin
+Doc6,find
+Doc6,porter
+Doc6,stem
+Doc6,algorithm
+Doc6,offici
+Doc6,site
+Doc6,exampl
+Doc6,realli
+Doc6,think
+Doc6,weak
+Doc6,yield
+Doc6,temptat
+Doc6,tell
+Doc6,terribl
+Doc6,temptat
+Doc6,requir
+Doc6,strength
+Doc6,strength
+Doc6,courag
+Doc6,yield
+Doc6,oscar
+Doc6,wild
+Doc6,stem
+Doc6,abov
+Doc6,content
+Doc6,overlay
+Doc6,overlay
+Doc6,output
+Doc6,goe
+Doc6,stem
+Doc6,stem
+Doc6,output
+Doc6,alon
+Doc6,goe
+Doc6,common
+Doc6,topic
+Doc6,taught
+Doc6,document
+Doc6,classif
+Doc6,includ
+Doc6,stop
+Doc6,word
+Doc6,invers
+Doc6,document
+Doc6,frequenc
+Doc6,free
+Doc6,softwar
+Doc6,relat
+Doc6,thi
+Doc6,field
+Doc6,lucen
+Doc6,carrot2
+Doc6,refer
+Doc6,demo
+Doc6,site
+Doc6,refer
+Doc6,js
+Doc6,implement
+Doc6,http://9ol.es/porter_js_demo.html
+link: http://tartarus.org/~martin/PorterStemmer/
+link: http://en.wikipedia.org/wiki/Document_classification
+link: http://en.wikipedia.org/wiki/Stop_words
+link: http://en.wikipedia.org/wiki/Tf*idf
+link: http://lucene.apache.org/core/
+link: http://search.carrot2.org/stable/search
+link: http://9ol.es/porter_js_demo.html
+Error on https://s2.smu.edu/~fmoore/syl_7330.pdf
+Error on https://s2.smu.edu/~fmoore/syl_5330.pdf
 url @Doc7 https://s2.smu.edu/~fmoore/misc/levenshtein.html
 Doc7,levenshtein
 Doc7,distanc
@@ -489,43 +481,46 @@ Doc7,dog
 Doc7,string
 Doc7,string
 Doc7,distanc
+Error on https://s2.smu.edu/~fmoore/misc/count_letters_duplicate.txt
+Error on https://s2.smu.edu/~fmoore/misc/count_letters.txt
 url @Doc8 https://www.smu.edu/lyle
-url @Doc9 https://s2.smu.edu/~fmoore/index-final.htm
+Error on https://s2.smu.edu/~fmoore/does_not_exist.htm
+url @Doc9 https://s2.smu.edu/~fmoore/index_duplicate.htm
+Doc9 is an exact duplicate from Doc1
 Doc9,freeman
 Doc9,moor
 Doc9,smu
 Doc9,spring
 Doc9,spring
 Doc9,freeman
-Doc9,L
+Doc9,l
 Doc9,moor
 Doc9,phd
 Doc9,email
-Doc9,fmoore@lyle.smu.edu
+Doc9,fmoore@smu.
+Doc9,u
+Doc9,spring
+Doc9,cse
 Doc9,fall
 Doc9,cse
-Doc9,spring
-Doc9,tuesday/thursday
-Doc9,caruth
-Doc9,cse
-Doc9,syllabu
-Doc9,cse
-Doc9,syllabu
 Doc9,keep
 Doc9,look
-Doc9,tent
 Doc9,cours
 Doc9,calendar
-Doc9,cours
+Doc9,latest
 Doc9,inform
-Doc9,canva
+Doc9,spring
+Doc9,t/th
+Doc9,caruth
+Doc9,syllabu
+Doc9,syllabu
 Doc9,content
 Doc9,thi
 Doc9,web
 Doc9,site
 Doc9,sole
 Doc9,respons
-Doc9,Dr
+Doc9,dr
 Doc9,freeman
 Doc9,moor
 Doc9,necessarili
@@ -538,12 +533,72 @@ Doc9,univers
 Doc9,administr
 Doc9,thi
 Doc9,site
-Doc9,Dr
+Doc9,dr
 Doc9,freeman
 Doc9,moor
 Doc9,may
 Doc9,contact
-Doc9,fmoore@lyle.smu.edu
+Doc9,fmoore@smu.edu
+link: mailto:fmoore@smu.edu
+link: http://lyle.smu.edu
+link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
+link: schedule.htm
+link: CSE5337_syllabus.pdf
+link: CSE7337_syllabus.pdf
+url @Doc10 https://s2.smu.edu/~fmoore/index-final.htm
+Doc10,freeman
+Doc10,moor
+Doc10,smu
+Doc10,spring
+Doc10,spring
+Doc10,freeman
+Doc10,l
+Doc10,moor
+Doc10,phd
+Doc10,email
+Doc10,fmoore@lyle.smu.edu
+Doc10,fall
+Doc10,cse
+Doc10,spring
+Doc10,tuesday/thursday
+Doc10,caruth
+Doc10,cse
+Doc10,syllabu
+Doc10,cse
+Doc10,syllabu
+Doc10,keep
+Doc10,look
+Doc10,tent
+Doc10,cours
+Doc10,calendar
+Doc10,cours
+Doc10,inform
+Doc10,canva
+Doc10,content
+Doc10,thi
+Doc10,web
+Doc10,site
+Doc10,sole
+Doc10,respons
+Doc10,dr
+Doc10,freeman
+Doc10,moor
+Doc10,necessarili
+Doc10,repres
+Doc10,opinion
+Doc10,polici
+Doc10,southern
+Doc10,methodist
+Doc10,univers
+Doc10,administr
+Doc10,thi
+Doc10,site
+Doc10,dr
+Doc10,freeman
+Doc10,moor
+Doc10,may
+Doc10,contact
+Doc10,fmoore@lyle.smu.edu
 link: SMU-CSE-LOGO.gif
 link: mailto:fmoore@lyle.smu.edu
 link: CSE5337_syllabus.pdf
@@ -551,29 +606,6 @@ link: CSE7337_syllabus.pdf
 link: schedule.htm
 link: https://smu.instructure.com
 link: dontgohere/badfile1.html
-url @Doc10 https://s2.smu.edu/~fmoore/index_duplicate.htm
-Doc10 is an exact duplicate from Doc1
-Doc10,freeman
-Doc10,moor
-Doc10,smu
-Doc10,spring
-Doc10,spring
-Doc10,freeman
-Doc10,L
-Doc10,moor
-Doc10,phd
-Doc10,email
-Doc10,fmoore@smu.
-Doc10,u
-Doc10,spring
-Doc10,cse
-Doc10,fall
-Doc10,cse
-Doc10,keep
-Doc10,look
-Doc10,cours
-Doc10,calendar
-Doc10,latest
 url @Doc11 https://s2.smu.edu/~fmoore/index.htm
 Doc11 is an exact duplicate from Doc1
 Doc11,freeman
@@ -582,7 +614,7 @@ Doc11,smu
 Doc11,spring
 Doc11,spring
 Doc11,freeman
-Doc11,L
+Doc11,l
 Doc11,moor
 Doc11,phd
 Doc11,email
@@ -598,30 +630,6 @@ Doc11,cours
 Doc11,calendar
 Doc11,latest
 Doc11,inform
-Doc10,inform
-Doc10,spring
-Doc10,t/th
-Doc10,caruth
-Doc10,syllabu
-Doc10,syllabu
-Doc10,content
-Doc10,thi
-Doc10,web
-Doc10,site
-Doc10,sole
-Doc10,respons
-Doc10,Dr
-Doc10,freeman
-Doc10,moor
-Doc10,necessarili
-Doc10,repres
-Doc10,opinion
-Doc10,polici
-Doc10,southern
-Doc10,methodist
-Doc10,univers
-Doc10,administr
-Doc10,thi
 Doc11,spring
 Doc11,t/th
 Doc11,caruth
@@ -633,7 +641,7 @@ Doc11,web
 Doc11,site
 Doc11,sole
 Doc11,respons
-Doc11,Dr
+Doc11,dr
 Doc11,freeman
 Doc11,moor
 Doc11,necessarili
@@ -646,20 +654,7 @@ Doc11,univers
 Doc11,administr
 Doc11,thi
 Doc11,site
-Doc10,site
-Doc10,Dr
-Doc10,freeman
-Doc10,moor
-Doc10,may
-Doc10,contact
-Doc10,fmoore@smu.edu
-link: mailto:fmoore@smu.edu
-link: http://lyle.smu.edu
-link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
-link: schedule.htm
-link: CSE5337_syllabus.pdf
-link: CSE7337_syllabus.pdf
-Doc11,Dr
+Doc11,dr
 Doc11,freeman
 Doc11,moor
 Doc11,may
@@ -671,7 +666,3 @@ link: http://lyle.smu.edu/~fmoore/index-fall2017.htm
 link: schedule.htm
 link: CSE5337_syllabus.pdf
 link: CSE7337_syllabus.pdf
-Error on https://s2.smu.edu/~fmoore/syl_7330.pdf
-Error on https://s2.smu.edu/~fmoore/syl_5330.pdf
-Error on https://s2.smu.edu/~fmoore/misc/count_letters.txt
-Error on https://s2.smu.edu/~fmoore/does_not_exist.htm
