@@ -3,6 +3,7 @@ import scrapy
 import re
 from scrapy.spidermiddlewares.httperror import HttpError
 
+index = 0
 disallowedUrls = []
 disallowedExtensions = ['.pdf', '.xlsx', '.jpg', '.gif']
 
@@ -19,6 +20,10 @@ class FmooreBrokenSpider(scrapy.Spider):
             yield {'broken-link': response.url}
 
     def parse(self, response):
+        if "PAGE_LIMIT" in self.settings.attributes and index == int(self.settings.attributes['PAGE_LIMIT'].value):
+            return
+
+        global index
         global disallowedUrls
 
         # Verify if file is robots.txt
@@ -40,6 +45,7 @@ class FmooreBrokenSpider(scrapy.Spider):
             if response.url.endswith(disallowedExt):
                 return
 
+        index = index + 1
         # Get all urls, print them and visit them
         for link in response.css('a::attr(href)').extract():
             yield response.follow(link, callback=self.parse, errback=self.err_callbck)

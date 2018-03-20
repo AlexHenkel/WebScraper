@@ -2,6 +2,7 @@
 import scrapy
 import re
 
+index = 0
 disallowedUrls = []
 disallowedExtensions = ['.pdf', '.xlsx', '.jpg', '.gif']
 allowed_domains = ['lyle.smu.edu', 's2.smu.edu']
@@ -13,6 +14,10 @@ class FmooreOutlinksSpider(scrapy.Spider):
         'http://lyle.smu.edu/~fmoore/robots.txt', 'http://lyle.smu.edu/~fmoore/']
 
     def parse(self, response):
+        if "PAGE_LIMIT" in self.settings.attributes and index == int(self.settings.attributes['PAGE_LIMIT'].value):
+            return
+
+        global index
         global disallowedUrls
 
         # Verify if site is allowed to crawl
@@ -52,6 +57,7 @@ class FmooreOutlinksSpider(scrapy.Spider):
             if response.url.endswith(disallowedExt):
                 return
 
+        index = index + 1
         # Get all urls, print them and visit them
         for link in response.css('a::attr(href)').extract():
             yield response.follow(link, callback=self.parse)

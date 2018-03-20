@@ -18,6 +18,14 @@ class FmooreTfSpider(scrapy.Spider):
         'http://lyle.smu.edu/~fmoore/robots.txt', 'http://lyle.smu.edu/~fmoore/']
 
     def parse(self, response):
+        if "PAGE_LIMIT" in self.settings.attributes and index == int(self.settings.attributes['PAGE_LIMIT'].value):
+            return
+
+        if "STOP_WORDS" in self.settings.attributes:
+            global stop_words
+            stop_words = self.settings.attributes['STOP_WORDS'].value.split(
+                ',')
+
         global index
         global disallowedUrls
 

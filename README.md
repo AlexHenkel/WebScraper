@@ -79,3 +79,16 @@ scrapy crawl fmoore-duplicates -o - > duplicates.csv -t csv
 ```
 scrapy crawl fmoore-outlinks -o - > outlinks_links.csv -t csv
 ```
+
+## Custom settings
+
+To add any of the following settings, append them to any command with the following syntax: `-s SETTING_NAME=<VALUE>`. Each setting should be preceded by `-s` flag.
+
+Example:
+
+```
+scrapy crawl fmoore -o - > allData.csv -t csv -s PAGE_LIMIT=10 -s STOP_WORDS='and,the,we,you'
+```
+
+* **PAGE_LIMIT**: Limit the number of pages to crawl. Value must be a valid integer
+* **STOP_WORDS**: List of words to be considered as stop words, and therefore ignored by the crawler. Value should be a string with values separated by commas and no spaces between. Ex: `'and,the,we,you'`

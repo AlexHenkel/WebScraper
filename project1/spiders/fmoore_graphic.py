@@ -2,6 +2,7 @@
 import scrapy
 import re
 
+index = 0
 disallowedUrls = []
 disallowedExtensions = ['.pdf', '.xlsx', '.jpg', '.gif']
 graphicExtensions = ['.gif', '.jpg', '.jpeg', '.png']
@@ -14,6 +15,10 @@ class FmooreGraphicSpider(scrapy.Spider):
         'http://lyle.smu.edu/~fmoore/robots.txt', 'http://lyle.smu.edu/~fmoore/']
 
     def parse(self, response):
+        if "PAGE_LIMIT" in self.settings.attributes and index == int(self.settings.attributes['PAGE_LIMIT'].value):
+            return
+
+        global index
         global disallowedUrls
 
         # Verify if file is robots.txt
@@ -35,6 +40,7 @@ class FmooreGraphicSpider(scrapy.Spider):
             if response.url.endswith(disallowedExt):
                 return
 
+        index = index + 1
         # Get all urls, print them and visit them
         for link in response.css('a::attr(href)').extract():
             for ext in graphicExtensions:
