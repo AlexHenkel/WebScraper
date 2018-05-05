@@ -30,10 +30,11 @@ class FmooreBrokenSpider(scrapy.Spider):
         if response.url.endswith("robots.txt"):
             global disallowedUrls
             robotsText = response.css('*::text').extract_first()
-            disallowed = re.findall('Disallow: .*', robotsText)
-            for rule in disallowed:
-                route = re.match("^([^/.]+)(.*)$", rule)
-                disallowedUrls.append(str(route.group(2)))
+            lines = robotsText.splitlines()
+            for line in lines:
+                if str(line).startswith('Disallow: '):
+                    route = re.match("^([^/.]+)(.*)$", str(line))
+                    disallowedUrls.append(str(route.group(2)))
             return
 
         # Blacklist disallowed Urls
