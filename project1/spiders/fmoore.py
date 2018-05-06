@@ -4,14 +4,17 @@ import re
 import hashlib
 import string
 from scrapy.spidermiddlewares.httperror import HttpError
-from nltk import PorterStemmer
-from nltk.corpus import stopwords
+from scrapy import signals
+from scrapy.xlib.pydispatch import dispatcher
+from utils import stop_words, filter_word
 
 index = 0
 disallowedUrls = []
 disallowedExtensions = ['.pdf', '.xlsx', '.jpg', '.gif']
 hashedFiles = []
-stop_words = set(stopwords.words('english'))
+main_dict = []
+title_dict = []
+info_dict = []
 
 
 class FmooreSpider(scrapy.Spider):
@@ -20,10 +23,13 @@ class FmooreSpider(scrapy.Spider):
     start_urls = [
         'http://lyle.smu.edu/~fmoore/robots.txt', 'http://lyle.smu.edu/~fmoore/']
 
-    def err_callbck(self, failure):
-        if failure.check(HttpError):
-            response = failure.value.response
-            print('Error on {}'.format(response.url))
+    def __init__(self):
+        dispatcher.connect(self.on_quit, signals.spider_closed)
+
+    def on_quit(self, spider):
+        print title_dict
+        print main_dict
+        print info_dict
 
     def parse(self, response):
         if "PAGE_LIMIT" in self.settings.attributes and index == int(self.settings.attributes['PAGE_LIMIT'].value):
@@ -58,43 +64,39 @@ class FmooreSpider(scrapy.Spider):
                 return
 
         index = index + 1
-        doc = "Doc{}".format(index)
-        print('url @{} {}'.format(doc, response.url))
 
         # Verify exact duplicates
         urlContent = map(lambda x: str(
             x.strip()), response.css('*:not(style):not(script)::text').extract())
         hashKey = hashlib.md5("".join(urlContent)).hexdigest()
         if hashKey in hashedFiles:
-            print('{} is an exact duplicate from Doc{}'.format(
-                doc, hashedFiles.index(hashKey) + 1))
+            return
         hashedFiles.append(hashKey)
 
+        local_list = []
         # Filter empty words and stop words. Start indexing
         for text in filter(lambda x: x, urlContent):
             for word in text.split():
-                word = word.lower()
-                # Filter tokens that don't start with letters
-                if not word or not word[0].isalpha():
-                    continue
+                new_token = filter_word(word)
+                if new_token:
+                    local_list.append(new_token)
 
-                # If word ends with sign, remove it
-                while word and word[-1] in string.punctuation:
-                    word = word[:-1]
-                if not word:
-                    continue
+        # Filter empty words and stop words from <title> tags
+        title_tag = response.css('title::text').extract_first()
+        local_title = []
+        if title_tag:
+            for word in str(title_tag).split():
+                new_token = filter_word(word)
+                if new_token:
+                    local_title.append(new_token)
 
-                # Filter stop words
-                if word in stop_words:
-                    continue
-
-                # Apply Porter Stemmer to word and construct and return item
-                yield {
-                    'word': PorterStemmer().stem(word),
-                    'doc': doc
-                }
+        global main_dict
+        global title_dict
+        global info_dict
+        main_dict.append(local_list)
+        title_dict.append(local_title)
+        info_dict.append({'doc': index})
 
         # Get all urls, print them and visit them
         for link in response.css('a::attr(href)').extract():
-            print('link: {}'.format(str(link)))
-            yield response.follow(link, callback=self.parse, errback=self.err_callbck)
+            yield response.follow(link, callback=self.parse)
