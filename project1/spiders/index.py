@@ -4,6 +4,7 @@ from utils import filter_word
 
 
 # Singleton class to hold an word index to apply query searches
+# Weighting is done using: ltc.ltc
 class Index(object):
     def __init__(self, docs):
         self.docs = docs
@@ -34,6 +35,9 @@ class Index(object):
 
         return idf
 
+    def get_logarithmic_tf(self, original_tf):
+        return 1 + math.log(original_tf, 10)
+
     # Create an index, where each term contains a list of [doc_id, normalized]
     # Ex: {'cse': [[0, 0.123], [1, 0.051], [2, 0.103], [5, 0.107], [6, 0.099], [8, 0.111], [12, 0.140], [16, 0.167]]}
     def create_normalized_index(self, docs):
@@ -45,9 +49,9 @@ class Index(object):
             # Get unique words by document and iterate them
             doc_tf_idf_weights = dict(Counter(docs[i]))
             for word in doc_tf_idf_weights.keys():
-                # Get logarithmic td and the multiply by idf to get weight
-                curr_word_weight_tf_idf = (
-                    1 + math.log(doc_tf_idf_weights[word], 10)) * self.idf[word]
+                # Get logarithmic tf and the multiply by idf to get weight
+                curr_word_weight_tf_idf = self.get_logarithmic_tf(
+                    doc_tf_idf_weights[word]) * self.idf[word]
                 doc_tf_idf_weights[word] = curr_word_weight_tf_idf
                 srqt_sum += curr_word_weight_tf_idf ** 2
 
@@ -55,18 +59,53 @@ class Index(object):
             srqt_sum = math.sqrt(srqt_sum)
 
             # Create the final index
-            for key in doc_tf_idf_weights.keys():
-                final_index[key].append(
-                    [i, doc_tf_idf_weights[key] / srqt_sum])
+            for word in doc_tf_idf_weights.keys():
+                final_index[word].append(
+                    [i, doc_tf_idf_weights[word] / srqt_sum])
         return final_index
 
-    def search(self, query):
+    # Create normalized vector of query terms
+    def create_query_vector(self, query):
+        final_vector = {}
+        srqt_sum = float(0)
+        # Get unique words by document and iterate them
+        query_tf_idf_weights = dict(Counter(query))
+        for word in query_tf_idf_weights.keys():
+            # Get logarithmic tf and the multiply by idf to get weight
+            curr_word_weight_tf_idf = self.get_logarithmic_tf(
+                query_tf_idf_weights[word]) * self.idf[word]
+            query_tf_idf_weights[word] = curr_word_weight_tf_idf
+            srqt_sum += curr_word_weight_tf_idf ** 2
+
+        # Get sqrt of sum of weights to calculate cosine normalization
+        srqt_sum = math.sqrt(srqt_sum)
+
+        # Create the final index
+        for word in query_tf_idf_weights.keys():
+            final_vector[word] = query_tf_idf_weights[word] / srqt_sum
+
+        return final_vector
+
+    def create_query_tokens(self, query):
         query_tokens = []
         for word in query.split():
             new_token = filter_word(word)
             if new_token:
                 query_tokens.append(new_token)
         return query_tokens
+
+    def get_query_similarities(self, query_vector, index):
+        scores = defaultdict(int)
+        for query_term, query_weight in query_vector.items():
+            for doc_id, doc_weight in index[query_term]:
+                scores[doc_id] += query_weight * doc_weight
+        return sorted(scores.items(), key=lambda x: x[1], reverse=True)
+
+    def search(self, query):
+        query_vector = self.create_query_vector(
+            self.create_query_tokens(query))
+        results = self.get_query_similarities(query_vector, self.index)
+        return results[:6]
 
     def get_doc_frequencies(self):
         return self.doc_frequencies
