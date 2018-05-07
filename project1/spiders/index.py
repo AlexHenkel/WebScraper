@@ -6,8 +6,11 @@ from utils import filter_word
 # Singleton class to hold an word index to apply query searches
 # Weighting is done using: ltc.ltc
 class Index(object):
-    def __init__(self, docs):
+    def __init__(self, docs, titles, titles_tokenized, urls):
         self.docs = docs
+        self.titles = titles
+        self.titles_tokenized = titles_tokenized
+        self.urls = urls
         # Counter of doc frequencies of each word
         self.doc_frequencies = self.create_doc_frequencies(self.docs)
         self.idf = self.create_idf(self.docs, self.doc_frequencies)
@@ -94,18 +97,33 @@ class Index(object):
                 query_tokens.append(new_token)
         return query_tokens
 
-    def get_query_similarities(self, query_vector, index):
+    def get_query_similarities(self, query_vector, index, titles_tokenized):
         scores = defaultdict(int)
+        touched_docs = []
         for query_term, query_weight in query_vector.items():
             for doc_id, doc_weight in index[query_term]:
-                scores[doc_id] += query_weight * doc_weight
+                final_sum = query_weight * doc_weight
+                # Add .25 whenever a query token appears on it's title, but only once per document
+                if query_term in titles_tokenized[doc_id] and not doc_id in touched_docs:
+                    final_sum += 0.25
+                    touched_docs.append(doc_id)
+                # Add sum to document's count
+                scores[doc_id] += final_sum
         return sorted(scores.items(), key=lambda x: x[1], reverse=True)
 
     def search(self, query):
         query_vector = self.create_query_vector(
             self.create_query_tokens(query))
-        results = self.get_query_similarities(query_vector, self.index)
-        return results[:6]
+        results = self.get_query_similarities(
+            query_vector, self.index, self.titles_tokenized)
+        formatted_results = []
+        # Top k results to be returned as result
+        top_k = 6
+        for result in results[:top_k]:
+            [curr_doc_id, curr_result] = result
+            formatted_results.append(
+                (curr_doc_id, curr_result, self.urls[curr_doc_id], self.titles[curr_doc_id], self.docs[curr_doc_id][:20]))
+        return formatted_results
 
     def get_doc_frequencies(self):
         return self.doc_frequencies

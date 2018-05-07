@@ -15,6 +15,8 @@ hashedFiles = []
 main_dict = []
 title_dict = []
 info_dict = []
+url_list = []
+url_tokenized_list = []
 
 
 class FmooreSpider(scrapy.Spider):
@@ -27,9 +29,10 @@ class FmooreSpider(scrapy.Spider):
         dispatcher.connect(self.on_quit, signals.spider_closed)
 
     def on_quit(self, spider):
-        print title_dict
-        print main_dict
-        print info_dict
+        # print title_dict
+        # print main_dict
+        # print info_dict
+        print url_list
 
     def parse(self, response):
         if "PAGE_LIMIT" in self.settings.attributes and index == int(self.settings.attributes['PAGE_LIMIT'].value):
@@ -85,6 +88,7 @@ class FmooreSpider(scrapy.Spider):
         title_tag = response.css('title::text').extract_first()
         local_title = []
         if title_tag:
+            title_tag = str(title_tag)
             for word in str(title_tag).split():
                 new_token = filter_word(word)
                 if new_token:
@@ -93,9 +97,13 @@ class FmooreSpider(scrapy.Spider):
         global main_dict
         global title_dict
         global info_dict
+        global url_list
+        global url_tokenized_list
         main_dict.append(local_list)
         title_dict.append(local_title)
         info_dict.append({'doc': index})
+        url_list.append(title_tag)
+        url_tokenized_list.append(response.url)
 
         # Get all urls, print them and visit them
         for link in response.css('a::attr(href)').extract():
