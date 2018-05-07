@@ -15,6 +15,24 @@ class Index(object):
         self.doc_frequencies = self.create_doc_frequencies(self.docs)
         self.idf = self.create_idf(self.docs, self.doc_frequencies)
         self.index = self.create_normalized_index(self.docs)
+        # Thesaurus used for query expansion
+        self.thesaurus = {
+            'beautiful': ['nice', 'fancy'],
+            'chapter': ['chpt'],
+            'chpt': ['chapter'],
+            'responsible': ['owner', 'accountable'],
+            'freemanmoore': ['freeman', 'moore'],
+            'dept': ['department'],
+            'brown': ['beige',	'tan', 'auburn'],
+            'tues': ['Tuesday'],
+            'sole': ['owner', 'single', 'shoe', 'boot'],
+            'homework': ['hmwk', 'home', 'work'],
+            'novel': ['book', 'unique'],
+            'computer': ['cse'],
+            'story': ['novel', 'book'],
+            'hocuspocus': ['magic',	'abracadabra'],
+            'thisworks': ['this', 'work'],
+        }
 
     # Create a list of document frequency of each word
     def create_doc_frequencies(self, docs):
@@ -85,6 +103,9 @@ class Index(object):
 
         # Create the final index
         for word in query_tf_idf_weights.keys():
+            # Prevent a division by zero when word doesn't exist
+            if query_tf_idf_weights[word] <= 0:
+                continue
             final_vector[word] = query_tf_idf_weights[word] / srqt_sum
 
         return final_vector
@@ -112,13 +133,30 @@ class Index(object):
         return sorted(scores.items(), key=lambda x: x[1], reverse=True)
 
     def search(self, query):
-        query_vector = self.create_query_vector(
-            self.create_query_tokens(query))
-        results = self.get_query_similarities(
-            query_vector, self.index, self.titles_tokenized)
+        # This list will hold the final results
         formatted_results = []
         # Top k results to be returned as result
         top_k = 6
+        # Get tokenized version of query
+        query_tokens = self.create_query_tokens(query)
+        # Obtain a vector from query to compare with docs
+        query_vector = self.create_query_vector(query_tokens)
+        # Apply cosine similarity between query and docs
+        results = self.get_query_similarities(
+            query_vector, self.index, self.titles_tokenized)
+        # If few results are returned, rerun query with query expansion
+        if len(results) < top_k / 2:
+            print 'init', results
+            for word in query.split():
+                # Verify if lowercase query term exists in our thesaurus
+                if word.lower() in self.thesaurus:
+                    # Add each synonim with the correct format to possibly match other terms
+                    for thesaurus_term in self.thesaurus[word.lower()]:
+                        query_tokens.append(filter_word(thesaurus_term))
+            # Re-obtain query vector and apply similarities again
+            query_vector = self.create_query_vector(query_tokens)
+            results = self.get_query_similarities(
+                query_vector, self.index, self.titles_tokenized)
         for result in results[:top_k]:
             [curr_doc_id, curr_result] = result
             formatted_results.append(
